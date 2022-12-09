@@ -12,3 +12,5 @@ There are my solutions for [Advent of Code 2015](https://adventofcode.com/2015/)
 [**Day 3: Perfectly Spherical Houses in a Vacuum**](/src/main/kotlin/day_03/) - [AdventOfCode](https://adventofcode.com/2015/day/3)
 
 [**Day 4: The Ideal Stocking Stuffer**](/src/main/kotlin/day_04/) - [AdventOfCode](https://adventofcode.com/2015/day/4)
+
+[**Day 5: Doesn't He Have Intern-Elves For This?**](/src/main/kotlin/day_05/) - [AdventOfCode](https://adventofcode.com/2015/day/5)
