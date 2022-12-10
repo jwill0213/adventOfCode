@@ -19,3 +19,5 @@ There are my solutions for [Advent of Code 2022](https://adventofcode.com/2022/)
 [**Day 8: Treetop Tree House**](/src/main/kotlin/day_08/) - [AdventOfCode](https://adventofcode.com/2022/day/8)
 
 [**Day 9: Rope Bridge**](/src/main/kotlin/day_09/) - [AdventOfCode](https://adventofcode.com/2022/day/9)
+
+[**Day 10: Cathode-Ray Tube**](/src/main/kotlin/day_10/) - [AdventOfCode](https://adventofcode.com/2022/day/10)
