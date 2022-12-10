@@ -14,3 +14,5 @@ There are my solutions for [Advent of Code 2015](https://adventofcode.com/2015/)
 [**Day 4: The Ideal Stocking Stuffer**](/src/main/kotlin/day_04/) - [AdventOfCode](https://adventofcode.com/2015/day/4)
 
 [**Day 5: Doesn't He Have Intern-Elves For This?**](/src/main/kotlin/day_05/) - [AdventOfCode](https://adventofcode.com/2015/day/5)
+
+[**Day 6: Probably a Fire Hazard**](/src/main/kotlin/day_06/) - [AdventOfCode](https://adventofcode.com/2015/day/6)
