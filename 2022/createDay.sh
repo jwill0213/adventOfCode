@@ -20,4 +20,4 @@ sed -i "s/--title--/$TITLE/; s/--day--/$PROVIDED_DAY/; s/--year--/$YEAR/" "./src
 
 curl --cookie "session=$AOC_COOKIE" https://adventofcode.com/"$YEAR"/day/"$PROVIDED_DAY"/input > ./src/main/kotlin/day_"$DAY"/input.txt
 
-printf "\n\n[**Day %s: %s**](/src/main/kotlin/day_%s/) - [AdventOfCode](https://adventofcode.com/%s/day/%s)" "$PROVIDED_DAY" "$TITLE" "$DAY" "$YEAR" "$PROVIDED_DAY" >> README.md
+printf "\n\n[**Day %s: %s**](./src/main/kotlin/day_%s/) - [AdventOfCode](https://adventofcode.com/%s/day/%s)" "$PROVIDED_DAY" "$TITLE" "$DAY" "$YEAR" "$PROVIDED_DAY" >> README.md
