@@ -25,3 +25,7 @@ There are my solutions for [Advent of Code 2022](https://adventofcode.com/2022/)
 [**Day 11: Monkey in the Middle**](./src/main/kotlin/day_11/) - [AdventOfCode](https://adventofcode.com/2022/day/11)
 
 [**Day 12: Hill Climbing Algorithm**](./src/main/kotlin/day_12/) - [AdventOfCode](https://adventofcode.com/2022/day/12)
+
+[**Day 13: Distress Signal**](./src/main/kotlin/day_13/) - [AdventOfCode](https://adventofcode.com/2022/day/13)
+
+[**Day 14: Regolith Reservoir**](./src/main/kotlin/day_14/) - [AdventOfCode](https://adventofcode.com/2022/day/14)

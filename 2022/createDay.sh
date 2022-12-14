@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 PROVIDED_DAY=$1
 TITLE=$2
