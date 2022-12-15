@@ -8,7 +8,7 @@ fun part1(input: List<String>) {
     var register = 1
     var finalSum = 0
     for (cycle in 1..220) {
-        var command = input[currentCommand]
+        val command = input[currentCommand]
         if (cycle in listOf(20,60,100,140,180,220)) {
             finalSum += register * cycle
         }
@@ -34,12 +34,10 @@ fun part2(input: List<String>) {
     var register = 1
     var crtLine: MutableList<Char> = mutableListOf()
     for (cycle in 1..240) {
-        var command = input[currentCommand]
+        val command = input[currentCommand]
         if(crtLine.size in register-1..register+1) {
-//            print("${crtLine.size} in $register")
             crtLine.add('#')
         } else {
-//            print("${crtLine.size} not in $register")
             crtLine.add('.')
         }
         if (crtLine.size == 40) {

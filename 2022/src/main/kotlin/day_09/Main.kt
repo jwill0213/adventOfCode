@@ -6,7 +6,7 @@ import kotlin.math.abs
 fun part1(input: List<String>) {
     var headLoc: Pair<Int,Int> = Pair(0,0)
     var tailLoc: Pair<Int,Int> = Pair(0,0)
-    var visitedLoc: HashMap<String, Int> = hashMapOf("(0,0)" to 1)
+    val visitedLoc: MutableSet<Pair<Int, Int>> = mutableSetOf(Pair(0,0))
 
     for (move in input) {
         val (dir, count) = move.split(" ")
@@ -14,7 +14,7 @@ fun part1(input: List<String>) {
         for (c in 1..count.toInt()){
             headLoc = moveDir(dir, headLoc)
             tailLoc = moveTail(headLoc, tailLoc)
-            visitedLoc["(${tailLoc.first},${tailLoc.second})"] = visitedLoc.getOrDefault("(${tailLoc.first},${tailLoc.second})", 0) + 1
+            visitedLoc.add(tailLoc)
         }
     }
     println("Tail visited ${visitedLoc.size}")
@@ -22,19 +22,18 @@ fun part1(input: List<String>) {
 
 fun part2(input: List<String>) {
     // Rope. Head is in index 0. Rest of tail is index 1 to 9
-    var rope: MutableList<Pair<Int, Int>> = mutableListOf(Pair(0,0),Pair(0,0),Pair(0,0),Pair(0,0),Pair(0,0),Pair(0,0),Pair(0,0),Pair(0,0),Pair(0,0),Pair(0,0))
-    var visitedLoc: HashMap<String, Int> = hashMapOf("(0,0)" to 1)
+    val rope: MutableList<Pair<Int, Int>> = MutableList(10) { Pair(0,0) }
+    val visitedLoc: MutableSet<Pair<Int, Int>> = mutableSetOf(Pair(0,0))
 
     for (move in input) {
         val (dir, count) = move.split(" ")
 
         for (c in 1..count.toInt()){
             rope[0] = moveDir(dir, rope[0])
-            for (t in 1..9) {
+            for (t in 1 until rope.size) {
                 rope[t] = moveTail(rope[t-1], rope[t])
             }
-            var tailLoc = rope[9]
-            visitedLoc["(${tailLoc.first},${tailLoc.second})"] = visitedLoc.getOrDefault("(${tailLoc.first},${tailLoc.second})", 0) + 1
+            visitedLoc.add(rope[9])
         }
     }
     println("Tail visited ${visitedLoc.size}")
@@ -46,39 +45,39 @@ fun moveTail(headLoc: Pair<Int, Int>, tailLoc: Pair<Int, Int>): Pair<Int, Int> {
         // move tail
         if (headLoc.first == newTailLoc.first) {
             // x is same, move y
-            if (headLoc.second - newTailLoc.second > 0) {
+            newTailLoc = if (headLoc.second - newTailLoc.second > 0) {
                 // move up
-                newTailLoc = moveDir("U", newTailLoc)
+                moveDir("U", newTailLoc)
             } else {
                 // move down
-                newTailLoc = moveDir("D", newTailLoc)
+                moveDir("D", newTailLoc)
             }
         } else if (headLoc.second == newTailLoc.second) {
             // y is same, move x
-            if (headLoc.first - newTailLoc.first > 0) {
+            newTailLoc = if (headLoc.first - newTailLoc.first > 0) {
                 // move right
-                newTailLoc = moveDir("R", newTailLoc)
+                moveDir("R", newTailLoc)
             } else {
                 // move left
-                newTailLoc = moveDir("L", newTailLoc)
+                moveDir("L", newTailLoc)
             }
         } else {
             // neither is same, move diagnal
             // move y
-            if (headLoc.second - newTailLoc.second > 0) {
+            newTailLoc = if (headLoc.second - newTailLoc.second > 0) {
                 // move up
-                newTailLoc = moveDir("U", newTailLoc)
+                moveDir("U", newTailLoc)
             } else {
                 // move down
-                newTailLoc = moveDir("D", newTailLoc)
+                moveDir("D", newTailLoc)
             }
             // move x
-            if (headLoc.first - newTailLoc.first > 0) {
+            newTailLoc = if (headLoc.first - newTailLoc.first > 0) {
                 // move right
-                newTailLoc = moveDir("R", newTailLoc)
+                moveDir("R", newTailLoc)
             } else {
                 // move left
-                newTailLoc = moveDir("L", newTailLoc)
+                moveDir("L", newTailLoc)
             }
         }
     }
