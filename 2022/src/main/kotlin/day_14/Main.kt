@@ -4,6 +4,10 @@ import java.io.File
 
 data class Point(val x: Int, val y: Int) {
     constructor(pointList: List<String>) : this(pointList[0].toInt(), pointList[1].toInt())
+
+    fun getMovePoints(): List<Point> {
+        return listOf(Point(x,y+1), Point(x-1,y+1), Point(x+1,y+1))
+    }
 }
 
 fun part1(input: List<String>) {
@@ -16,24 +20,18 @@ fun part1(input: List<String>) {
             // No possible blockages below.
             break
         }
-        if (blockedPoints.contains(Point(curSandPoint.x, curSandPoint.y + 1))) {
-            // Point directly below is blocked
-            if (blockedPoints.contains(Point(curSandPoint.x - 1, curSandPoint.y + 1))) {
-                // left is blocked
-                if (blockedPoints.contains(Point(curSandPoint.x + 1, curSandPoint.y + 1))) {
-                    // right is blocked. Sand is at rest
-                    blockedPoints.add(curSandPoint)
-                    // next point
-                    curSandPoint = Point(500, 0)
-                    fallenSandUnits++
-                } else {
-                    curSandPoint = Point(curSandPoint.x + 1, curSandPoint.y + 1)
-                }
+        val moveList = curSandPoint.getMovePoints()
+        for (p in moveList) {
+            if (!blockedPoints.contains(p)) {
+                curSandPoint = p
+                break
             } else {
-                curSandPoint = Point(curSandPoint.x - 1, curSandPoint.y + 1)
+                if (p == moveList.last()) {
+                    blockedPoints.add(curSandPoint)
+                    fallenSandUnits++
+                    curSandPoint = Point(500,0)
+                }
             }
-        } else {
-            curSandPoint = Point(curSandPoint.x, curSandPoint.y + 1)
         }
     }
 
@@ -50,29 +48,24 @@ fun part2(input: List<String>) {
             // Falling sand is blocked
             break
         }
-        if (curSandPoint.y + 1 == floorY) {
-            // Hit the floor. At rest
-            blockedPoints.add(curSandPoint)
-            curSandPoint = Point(500,0)
-            fallenSandUnits++
-        } else if (blockedPoints.contains(Point(curSandPoint.x, curSandPoint.y + 1))) {
-            // Point directly below is blocked
-            if (blockedPoints.contains(Point(curSandPoint.x - 1, curSandPoint.y + 1))) {
-                // left is blocked
-                if (blockedPoints.contains(Point(curSandPoint.x + 1, curSandPoint.y + 1))) {
-                    // right is blocked. Sand is at rest
-                    blockedPoints.add(curSandPoint)
-                    // next point
-                    curSandPoint = Point(500, 0)
-                    fallenSandUnits++
-                } else {
-                    curSandPoint = Point(curSandPoint.x + 1, curSandPoint.y + 1)
-                }
+        val moveList = curSandPoint.getMovePoints()
+        for (p in moveList) {
+            if (p.y == floorY) {
+                // Hit the floor. At rest
+                blockedPoints.add(curSandPoint)
+                curSandPoint = Point(500,0)
+                fallenSandUnits++
+                break
+            } else if (!blockedPoints.contains(p)) {
+                curSandPoint = p
+                break
             } else {
-                curSandPoint = Point(curSandPoint.x - 1, curSandPoint.y + 1)
+                if (p == moveList.last()) {
+                    blockedPoints.add(curSandPoint)
+                    fallenSandUnits++
+                    curSandPoint = Point(500,0)
+                }
             }
-        } else {
-            curSandPoint = Point(curSandPoint.x, curSandPoint.y + 1)
         }
     }
 
