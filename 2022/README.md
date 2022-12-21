@@ -29,3 +29,5 @@ There are my solutions for [Advent of Code 2022](https://adventofcode.com/2022/)
 [**Day 13: Distress Signal**](./src/main/kotlin/day_13/) - [AdventOfCode](https://adventofcode.com/2022/day/13)
 
 [**Day 14: Regolith Reservoir**](./src/main/kotlin/day_14/) - [AdventOfCode](https://adventofcode.com/2022/day/14)
+
+[**Day 15: Beacon Exclusion Zone**](./src/main/kotlin/day_15/) - [AdventOfCode](https://adventofcode.com/2022/day/15)
