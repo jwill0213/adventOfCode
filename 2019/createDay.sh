@@ -2,6 +2,7 @@
 
 PROVIDED_DAY=$1
 TITLE=$2
+AOC_COOKIE=$(cat ../.aoc_cookie)
 
 if [ "$PROVIDED_DAY" -lt 10 ]; then
     DAY="0${PROVIDED_DAY}"
