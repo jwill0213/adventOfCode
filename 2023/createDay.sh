@@ -15,8 +15,8 @@ mkdir -p ./day_${DAY}
 
 cp -R ./template/* ./day_"$DAY"
 
-sed -i "s/template/day_${DAY}/" "./day_${DAY}/cargo.toml"
-sed -i "s/template/day_${DAY}/" "./day_${DAY}/cargo.lock"
+sed -i "s/template/day_${DAY}/" "./day_${DAY}/Cargo.toml"
+sed -i "s/template/day_${DAY}/" "./day_${DAY}/Cargo.lock"
 
 sed -i "s/--title--/$TITLE/; s/--day--/$PROVIDED_DAY/; s/--year--/$YEAR/" "./day_$DAY/README.md"
 
