@@ -5,3 +5,7 @@ There are my solutions for [Advent of Code 2023](https://adventofcode.com/2023/)
 [**Day 1: Trebuchet?!**](day_01/) - [AdventOfCode](https://adventofcode.com/2023/day/1)
 
 [**Day 1: Trebuchet?!**](day_01/) - [AdventOfCode](https://adventofcode.com/2023/day/1)
+
+[**Day 2: Cube**](day_02/) - [AdventOfCode](https://adventofcode.com/2023/day/2)
+
+[**Day 2: Cube Conundrum**](day_02/) - [AdventOfCode](https://adventofcode.com/2023/day/2)
