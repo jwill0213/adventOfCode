@@ -11,3 +11,5 @@ There are my solutions for [Advent of Code 2023](https://adventofcode.com/2023/)
 [**Day 2: Cube Conundrum**](day_02/) - [AdventOfCode](https://adventofcode.com/2023/day/2)
 
 [**Day 3: Gear Ratios**](day_03/) - [AdventOfCode](https://adventofcode.com/2023/day/3)
+
+[**Day 4: Scratchcards**](day_04/) - [AdventOfCode](https://adventofcode.com/2023/day/4)
