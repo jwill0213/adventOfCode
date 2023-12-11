@@ -19,3 +19,11 @@ There are my solutions for [Advent of Code 2023](https://adventofcode.com/2023/)
 [**Day 6: Wait For It**](day_06/) - [AdventOfCode](https://adventofcode.com/2023/day/6)
 
 [**Day 7: Camel Cards**](day_07/) - [AdventOfCode](https://adventofcode.com/2023/day/7)
+
+[**Day 8: Haunted Wasteland**](day_08/) - [AdventOfCode](https://adventofcode.com/2023/day/8)
+
+[**Day 9: Mirage Maintenance**](day_09/) - [AdventOfCode](https://adventofcode.com/2023/day/9)
+
+[**Day 10: Pipe Maze**](day_10/) - [AdventOfCode](https://adventofcode.com/2023/day/10)
+
+[**Day 11: Cosmic Expansion**](day_11/) - [AdventOfCode](https://adventofcode.com/2023/day/11)
