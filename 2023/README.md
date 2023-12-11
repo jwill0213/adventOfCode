@@ -17,3 +17,5 @@ There are my solutions for [Advent of Code 2023](https://adventofcode.com/2023/)
 [**Day 5: If You Give A Seed A Fertilizer**](day_05/) - [AdventOfCode](https://adventofcode.com/2023/day/5)
 
 [**Day 6: Wait For It**](day_06/) - [AdventOfCode](https://adventofcode.com/2023/day/6)
+
+[**Day 7: Camel Cards**](day_07/) - [AdventOfCode](https://adventofcode.com/2023/day/7)
