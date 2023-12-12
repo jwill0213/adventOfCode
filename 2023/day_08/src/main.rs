@@ -47,7 +47,7 @@ pub fn part2(input: &str) -> String {
     input_iter.next();
     let nodes = parse_nodes(input_iter);
     // println!("{:?}", nodes);
-    let mut curr_nodes: Vec<&str> = nodes
+    let curr_nodes: Vec<&str> = nodes
         .keys()
         .filter(|n| n.ends_with("A"))
         .map(|n| *n)

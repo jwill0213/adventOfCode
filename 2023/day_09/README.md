@@ -90,4 +90,22 @@ Analyze your OASIS report and extrapolate the next value for each history. _What
 
 ## \--- Part Two ---
 
-TBD
+Of course, it would be nice to have _even more history_ included in your report. Surely it's safe to just _extrapolate backwards_ as well, right?
+
+For each history, repeat the process of finding differences until the sequence of differences is entirely zero. Then, rather than adding a zero to the end and filling in the next values of each previous sequence, you should instead add a zero to the _beginning_ of your sequence of zeroes, then fill in new _first_ values for each previous sequence.
+
+In particular, here is what the third example history looks like when extrapolating back in time:
+
+```
+<em>5</em>  10  13  16  21  30  45
+  <em>5</em>   3   3   5   9  15
+   <em>-2</em>   0   2   4   6
+      <em>2</em>   2   2   2
+        <em>0</em>   0   0
+```
+
+Adding the new values on the left side of each sequence from bottom to top eventually reveals the new left-most history value: `_5_`.
+
+Doing this for the remaining example data above results in previous values of `_-3_` for the first history and `_0_` for the second history. Adding all three new values together produces `_2_`.
+
+Analyze your OASIS report again, this time extrapolating the _previous_ value for each history. _What is the sum of these extrapolated values?_
