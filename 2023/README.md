@@ -27,3 +27,5 @@ There are my solutions for [Advent of Code 2023](https://adventofcode.com/2023/)
 [**Day 10: Pipe Maze**](day_10/) - [AdventOfCode](https://adventofcode.com/2023/day/10)
 
 [**Day 11: Cosmic Expansion**](day_11/) - [AdventOfCode](https://adventofcode.com/2023/day/11)
+
+[**Day 12: Hot Springs**](day_12/) - [AdventOfCode](https://adventofcode.com/2023/day/12)
