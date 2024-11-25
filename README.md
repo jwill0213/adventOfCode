@@ -10,3 +10,5 @@ My solutions for [Advent of Code](https://adventofcode.com/events). Each year I 
 [**2022**](2022/) - Kotlin
 
 [**2023**](2023/) - Rust
+
+[**2024**](2024/) - Kotlin
