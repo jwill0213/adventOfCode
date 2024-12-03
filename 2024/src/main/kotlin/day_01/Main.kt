@@ -2,6 +2,8 @@ package day_01
 
 import java.io.File
 import kotlin.math.abs
+import kotlin.time.DurationUnit
+import kotlin.time.measureTime
 
 fun part1(input: List<String>) {
     val firstNums = mutableListOf<Int>()
@@ -43,7 +45,16 @@ fun part2(input: List<String>) {
 fun main(){
     val inputFile = File("src/main/kotlin/day_01/input.txt")
     print("\n----- Part 1 -----\n")
-    part1(inputFile.readLines())
+    val p1Time = measureTime {
+        println(day_02.part1(inputFile.readLines()))
+    }
+    println(p1Time.toString(DurationUnit.SECONDS, 4))
     print("\n----- Part 2 -----\n")
-    part2(inputFile.readLines())
+    val p2Time = measureTime {
+        println(day_02.part2(inputFile.readLines()))
+    }
+    println(p2Time.toString(DurationUnit.SECONDS, 4))
+
+    println("\n----- Total Time -----")
+    println((p1Time + p2Time).toString(DurationUnit.SECONDS, 4))
 }
