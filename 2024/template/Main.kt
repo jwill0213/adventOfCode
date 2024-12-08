@@ -1,13 +1,15 @@
 package template
 
 import java.io.File
+import kotlin.time.DurationUnit
+import kotlin.time.measureTime
 
-fun part1(input: List<String>) {
-    print(input)
+fun part1(input: List<String>): String {
+    return "TBD"
 }
 
-fun part2(input: List<String>) {
-    print(input)
+fun part2(input: List<String>): String {
+    return "TBD"
 }
 
 fun main(){

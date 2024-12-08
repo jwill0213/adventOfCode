@@ -6,3 +6,5 @@ There are my solutions for [Advent of Code 2024](https://adventofcode.com/2024/)
 [**Day 1: Historian Hysteria**](./src/main/kotlin/day_01/) - [AdventOfCode](https://adventofcode.com/2024/day/1)
 
 [**Day 2: Red-Nosed Reports**](./src/main/kotlin/day_02/) - [AdventOfCode](https://adventofcode.com/2024/day/2)
+
+[**Day 3: Mull It Over**](./src/main/kotlin/day_03/) - [AdventOfCode](https://adventofcode.com/2024/day/3)
