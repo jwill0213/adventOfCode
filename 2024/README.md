@@ -12,3 +12,5 @@ There are my solutions for [Advent of Code 2024](https://adventofcode.com/2024/)
 [**Day 4: Ceres Search**](./src/main/kotlin/day_04/) - [AdventOfCode](https://adventofcode.com/2024/day/4)
 
 [**Day 5: Print Queue**](./src/main/kotlin/day_05/) - [AdventOfCode](https://adventofcode.com/2024/day/5)
+
+[**Day 6: Guard Gallivant**](./src/main/kotlin/day_06/) - [AdventOfCode](https://adventofcode.com/2024/day/6)
